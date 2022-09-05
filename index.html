@@ -1,0 +1,49 @@
+<html>
+  <head>
+    <title>Nature Plans Website</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+    <div class="navbar">
+      <img src="image/717421.png" width="70px" height="70px" class="logo" />
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Products</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+    </div>
+    <div class="content">
+      <div class="left-col">
+        <h1>Plant Trees <br> Save The <br> Earth.</h1>
+
+      </div>
+      <div class="right-col">
+        <p> Sounds of Nature</p>
+        <img src="image/play-icon.png" width="50px" height="50px" id="icon">
+      </div>
+
+    </div>
+    <audio id="sound">
+      <source src="sound/sound.mp3" type="audio/mp3">
+
+    </audio>
+
+    <script>
+      var sound= document.getElementById("sound");
+      var icon = document.getElementById("icon");
+
+      icon.onclick = function(){
+        if(sound.paused){
+          sound.play();
+          icon.src = "image/pause-icon.png";
+        }else{
+          sound.pause();
+          icon.src = "image/play-icon.png";
+        }
+      }
+    </script>
+  </body>
+</html>
